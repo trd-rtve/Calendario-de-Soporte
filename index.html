@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
@@ -15,7 +16,7 @@
             --empty-day-bg: #f9f9f9;
             --header-gradient: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
         }
-        
+
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
@@ -23,7 +24,7 @@
             background-color: #f5f5f5;
             font-size: 16px;
         }
-        
+
         .header {
             text-align: center;
             margin-bottom: 25px;
@@ -31,17 +32,17 @@
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
             border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
-        
+
         .month-container {
             margin-bottom: 35px;
             background: white;
             border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
             overflow: hidden;
         }
-        
+
         .month-header {
             background: var(--header-gradient);
             color: white;
@@ -50,19 +51,19 @@
             font-weight: bold;
             text-align: center;
         }
-        
+
         .calendar-wrapper {
             overflow-x: auto;
             padding: 5px;
         }
-        
+
         .month-table {
             width: 100%;
             min-width: 600px;
             border-collapse: collapse;
             table-layout: fixed;
         }
-        
+
         .month-table th {
             background: #f8f9fa;
             padding: 12px 8px;
@@ -70,63 +71,63 @@
             border-bottom: 2px solid #dee2e6;
             font-weight: 600;
         }
-        
+
         .month-table td {
             padding: 8px;
             border: 1px solid #e0e0e0;
             vertical-align: top;
             height: 120px;
         }
-        
+
         .day-number {
             font-weight: bold;
             margin-bottom: 5px;
             text-align: right;
             font-size: 1em;
         }
-        
+
         .empty-day {
             background-color: var(--empty-day-bg);
         }
-        
+
         .support-day {
             background-color: var(--support-bg);
             border-left: 4px solid var(--secundario-color);
         }
-        
+
         .principal {
             font-weight: bold;
             color: var(--principal-color);
             margin-bottom: 5px;
             font-size: 0.9em;
         }
-        
+
         .secundario {
             color: var(--secundario-color);
             margin-bottom: 5px;
             font-size: 0.9em;
         }
-        
+
         .telefono {
             font-size: 0.85em;
             color: #666;
             font-family: monospace;
             margin-bottom: 3px;
         }
-        
+
         .friday {
             background-color: var(--friday-bg);
         }
-        
+
         /* Tabla de control */
         .control-section {
             margin-top: 40px;
             background: white;
             border-radius: 10px;
             padding: 20px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
-        
+
         .control-header {
             background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
             color: white;
@@ -137,13 +138,13 @@
             border-radius: 5px;
             margin-bottom: 20px;
         }
-        
+
         .control-table {
             width: 100%;
             border-collapse: collapse;
             margin-bottom: 20px;
         }
-        
+
         .control-table th {
             background: #6c757d;
             color: white;
@@ -151,68 +152,72 @@
             text-align: left;
             font-size: 0.9em;
         }
-        
+
         .control-table td {
             padding: 8px;
             border: 1px solid #dee2e6;
             font-size: 0.85em;
         }
-        
+
         .control-table tr:nth-child(even) {
             background-color: #f8f9fa;
         }
-        
+
         .stats-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 15px;
             margin-top: 20px;
         }
-        
+
         .stat-card {
             background: #f8f9fa;
             padding: 15px;
             border-radius: 8px;
             border-left: 4px solid #007bff;
         }
-        
+
         .stat-title {
             font-weight: bold;
             color: #495057;
             margin-bottom: 5px;
         }
-        
+
         .stat-value {
             font-size: 1.2em;
             color: #007bff;
         }
-        
+
         /* Responsive */
         @media (max-width: 768px) {
             body {
                 padding: 10px;
                 font-size: 15px;
             }
-            
+
             .month-table td {
                 height: 100px;
                 padding: 5px;
             }
-            
-            .principal, .secundario {
+
+            .principal,
+            .secundario {
                 font-size: 0.85em;
             }
-            
+
             .telefono {
                 font-size: 0.8em;
             }
         }
     </style>
 </head>
+
 <body>
     <div class="header">
         <h1>📅 Calendario de Soporte</h1>
     </div>
+
+
 
 
 
@@ -239,7 +244,8 @@
                         <td class="empty-day"></td>
                         <td class="empty-day" style="background-color: var(--holiday-bg);">
                             <div class="day-number" style="color: var(--holiday-text);">1</div>
-                            <div style="text-align: center; color: var(--holiday-text); font-weight: bold;">🎆 Año Nuevo</div>
+                            <div style="text-align: center; color: var(--holiday-text); font-weight: bold;">🎆 Año Nuevo
+                            </div>
                         </td>
                         <td class="support-day friday">
                             <div class="day-number">2</div>
@@ -248,8 +254,12 @@
                             <div class="secundario">👥 Alex</div>
                             <div class="telefono">📞 682 40 36 39</div>
                         </td>
-                        <td class="empty-day"><div class="day-number">3</div></td>
-                        <td class="empty-day"><div class="day-number">4</div></td>
+                        <td class="empty-day">
+                            <div class="day-number">3</div>
+                        </td>
+                        <td class="empty-day">
+                            <div class="day-number">4</div>
+                        </td>
                     </tr>
                     <tr>
                         <!-- Semana 19: 5-9 enero -->
@@ -260,7 +270,8 @@
                         </td>
                         <td class="empty-day" style="background-color: var(--holiday-bg);">
                             <div class="day-number" style="color: var(--holiday-text);">6</div>
-                            <div style="text-align: center; color: var(--holiday-text); font-weight: bold;">👑 Reyes</div>
+                            <div style="text-align: center; color: var(--holiday-text); font-weight: bold;">👑 Reyes
+                            </div>
                         </td>
                         <td class="support-day">
                             <div class="day-number">7</div>
@@ -283,8 +294,12 @@
                             <div class="secundario">👥 Mario</div>
                             <div class="telefono">📞 686 43 24 76</div>
                         </td>
-                        <td class="empty-day"><div class="day-number">10</div></td>
-                        <td class="empty-day"><div class="day-number">11</div></td>
+                        <td class="empty-day">
+                            <div class="day-number">10</div>
+                        </td>
+                        <td class="empty-day">
+                            <div class="day-number">11</div>
+                        </td>
                     </tr>
                     <tr>
                         <!-- Semana 20: 12-16 enero -->
@@ -292,18 +307,18 @@
                             <div class="day-number">12</div>
                             <div class="principal">👤 Alex</div>
                             <div class="telefono">📞 682 40 36 39</div>
-                            <div class="secundario">👤 Fede</div>
-                            <div class="telefono">📞 686 64 27 28</div>
                         </td>
                         <td class="support-day">
                             <div class="day-number">13</div>
-                            <div class="principal">👥 Carlos S</div>
+                            <div class="principal">👤 Fede</div>
+                            <div class="telefono">📞 686 64 27 28</div>
+                            <div class="secundario">👥 Carlos S</div>
                             <div class="telefono">📞 630 64 40 81</div>
                         </td>
                         <td class="support-day">
                             <div class="day-number">14</div>
-                            <div class="principal">👤 Raúl</div>
-                            <div class="telefono">📞 652 41 70 48</div>
+                            <div class="principal">👤 Mario</div>
+                            <div class="telefono">📞 686 43 24 76</div>
                         </td>
                         <td class="support-day">
                             <div class="day-number">15</div>
@@ -317,51 +332,264 @@
                             <div class="principal">👤 Moha</div>
                             <div class="telefono">📞 608 40 70 26</div>
                         </td>
-                        <td class="empty-day"><div class="day-number">17</div></td>
-                        <td class="empty-day"><div class="day-number">18</div></td>
+                        <td class="empty-day">
+                            <div class="day-number">17</div>
+                        </td>
+                        <td class="empty-day">
+                            <div class="day-number">18</div>
+                        </td>
                     </tr>
+                    <!-- Continuación Enero 2026 -->
                     <tr>
                         <!-- Lunes 19 -->
                         <td class="support-day">
                             <div class="day-number">19</div>
                             <div class="principal">👤 Alex</div>
                             <div class="telefono">📞 682 40 36 39</div>
+                            <div class="secundario">👥 Paula</div>
+                            <div class="telefono">📞 639 10 27 17</div>
                         </td>
-    
+
                         <!-- Martes 20 -->
                         <td class="support-day">
                             <div class="day-number">20</div>
-                            <div class="principal">👤 Moha</div>
+                            <div class="principal">👤 Fede</div>
+                            <div class="telefono">📞 686 64 27 28</div>
+                            <div class="secundario">👤 Moha</div>
                             <div class="telefono">📞 608 40 70 26</div>
                         </td>
-    
+
                         <!-- Miércoles 21 -->
                         <td class="support-day">
                             <div class="day-number">21</div>
-                            <div class="secundario">👥 Mario</div>
-                            <div class="telefono">📞 686 43 24 76</div>
+                            <div class="principal">👤 Carlos S</div>
+                            <div class="telefono">📞 630 64 40 81</div>
                             <div class="secundario">👥 Sofia</div>
                             <div class="telefono">📞 682 21 40 25</div>
                         </td>
-    
+
                         <!-- Jueves 22 -->
                         <td class="support-day">
                             <div class="day-number">22</div>
-                            <div class="principal">👥 Paula</div>
-                            <div class="telefono">📞 639 10 27 17</div>
-                            <div class="secundario">👤 Fede</div>
-                            <div class="telefono">📞 686 64 27 28</div>
+                            <div class="principal">👤 Mario</div>
+                            <div class="telefono">📞 686 43 24 76</div>
                         </td>
-    
+
                         <!-- Viernes 23 -->
                         <td class="support-day friday">
                             <div class="day-number">23</div>
                             <div class="principal">👥 Raúl</div>
                             <div class="telefono">📞 608 52 98 38</div>
                         </td>
-    
-                        <td class="empty-day"><div class="day-number">24</div></td>
-                        <td class="empty-day"><div class="day-number">25</div></td>
+
+                        <td class="empty-day">
+                            <div class="day-number">24</div>
+                        </td>
+                        <td class="empty-day">
+                            <div class="day-number">25</div>
+                        </td>
+                    </tr>
+
+
+
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <br>
+
+    <!-- Febrero 2026 -->
+    <div class="month-container">
+        <div class="month-header">📍 Febrero 2026</div>
+        <div class="calendar-wrapper">
+            <table class="month-table">
+                <thead>
+                    <tr>
+                        <th>Lunes</th>
+                        <th>Martes</th>
+                        <th>Miércoles</th>
+                        <th>Jueves</th>
+                        <th>Viernes</th>
+                        <th>Sábado</th>
+                        <th>Domingo</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Semana 1 -->
+                    <tr>
+                        <td class="empty-day"></td>
+                        <td class="empty-day"></td>
+                        <td class="empty-day"></td>
+                        <td class="empty-day"></td>
+                        <td class="empty-day"></td>
+                        <td class="empty-day"></td>
+                        <td class="empty-day">
+                            <div class="day-number">1</div>
+                        </td>
+                    </tr>
+
+                    <!-- Semana 2 (Feb 2-8) -->
+                    <tr>
+                        <td class="support-day">
+                            <div class="day-number">2</div>
+                            <div class="principal">👤 Fede</div>
+                            <div class="telefono">📞 686 64 27 28</div>
+                            <div class="principal">👤 Raúl</div>
+                            <div class="telefono">📞 608 52 98 38</div>
+                        </td>
+                        <td class="support-day">
+                            <div class="day-number">3</div>
+                            <div class="principal">👤 Sofia</div>
+                            <div class="telefono">📞 682 21 40 25</div>
+                            <div class="secundario">👥 Moha</div>
+                            <div class="telefono">📞 608 40 70 26</div>
+                        </td>
+                        <td class="support-day">
+                            <div class="day-number">4</div>
+                            <div class="principal">👤 Paula</div>
+                            <div class="telefono">📞 639 10 27 17</div>
+                        </td>
+                        <td class="support-day">
+                            <div class="day-number">5</div>
+                            <div class="principal">👤 Mario</div>
+                            <div class="telefono">📞 686 43 24 76</div>
+                        </td>
+                        <td class="support-day friday">
+                            <div class="day-number">6</div>
+                            <div class="principal">👥 Alex</div>
+                            <div class="telefono">📞 682 40 36 39</div>
+                            <div class="secundario">👥 Carlos S</div>
+                            <div class="telefono">📞 630 64 40 81</div>
+                        </td>
+                        <td class="empty-day">
+                            <div class="day-number">7</div>
+                        </td>
+                        <td class="empty-day">
+                            <div class="day-number">8</div>
+                        </td>
+                    </tr>
+
+                    <!-- Semana 3 (Feb 9-15) -->
+                    <tr>
+                        <td class="support-day">
+                            <div class="day-number">9</div>
+                            <div class="principal">👤 Raúl</div>
+                            <div class="telefono">📞 608 52 98 38</div>
+                            <div class="secundario">👥 Mario</div>
+                            <div class="telefono">📞 686 43 24 76</div>
+                        </td>
+                        <td class="support-day">
+                            <div class="day-number">10</div>
+                            <div class="principal">👤 Carlos S</div>
+                            <div class="telefono">📞 630 64 40 81</div>
+                        </td>
+                        <td class="support-day">
+                            <div class="day-number">11</div>
+                            <div class="principal">👤 Moha</div>
+                            <div class="telefono">📞 608 40 70 26</div>
+                            <div class="secundario">👥 Sofia</div>
+                            <div class="telefono">📞 682 21 40 25</div>
+                        </td>
+                        <td class="support-day">
+                            <div class="day-number">12</div>
+                            <div class="principal">👤 Alex</div>
+                            <div class="telefono">📞 682 40 36 39</div>
+                        </td>
+                        <td class="support-day friday">
+                            <div class="day-number">13</div>
+                            <div class="principal">👤 Fede</div>
+                            <div class="telefono">📞 686 64 27 28</div>
+                            <div class="secundario">👥 Paula</div>
+                            <div class="telefono">📞 639 10 27 17</div>
+                        </td>
+                        <td class="empty-day">
+                            <div class="day-number">14</div>
+                        </td>
+                        <td class="empty-day">
+                            <div class="day-number">15</div>
+                        </td>
+                    </tr>
+
+                    <!-- Semana 4 (Feb 16-22) -->
+                    <tr>
+                        <td class="support-day">
+                            <div class="day-number">16</div>
+                            <div class="principal">👤 Alex</div>
+                            <div class="telefono">📞 682 40 36 39</div>
+                            <div class="secundario">👥 Fede</div>
+                            <div class="telefono">📞 686 64 27 28</div>
+                        </td>
+                        <td class="support-day">
+                            <div class="day-number">17</div>
+                            <div class="principal">👤 Mario</div>
+                            <div class="telefono">📞 686 43 24 76</div>
+                        </td>
+                        <td class="support-day">
+                            <div class="day-number">18</div>
+                            <div class="principal">👤 Sofia</div>
+                            <div class="telefono">📞 682 21 40 25</div>
+                            <div class="secundario">👥 Carlos S</div>
+                            <div class="telefono">📞 630 64 40 81</div>
+                        </td>
+                        <td class="support-day">
+                            <div class="day-number">19</div>
+                            <div class="principal">👤 Paula</div>
+                            <div class="telefono">📞 639 10 27 17</div>
+                        </td>
+                        <td class="support-day friday">
+                            <div class="day-number">20</div>
+                            <div class="principal">👤 Moha</div>
+                            <div class="telefono">📞 608 40 70 26</div>
+                            <div class="secundario">👥 Raúl</div>
+                            <div class="telefono">📞 608 52 98 38</div>
+                        </td>
+                        <td class="empty-day">
+                            <div class="day-number">21</div>
+                        </td>
+                        <td class="empty-day">
+                            <div class="day-number">22</div>
+                        </td>
+                    </tr>
+
+                    <!-- Semana 5 (Feb 23-28) -->
+                    <tr>
+                        <td class="support-day">
+                            <div class="day-number">23</div>
+                            <div class="principal">👤 Paula</div>
+                            <div class="telefono">📞 639 10 27 17</div>
+                            <div class="secundario">👥 Moha</div>
+                            <div class="telefono">📞 608 40 70 26</div>
+                        </td>
+                        <td class="support-day">
+                            <div class="day-number">24</div>
+                            <div class="principal">👤 Raúl</div>
+                            <div class="telefono">📞 608 52 98 38</div>
+                            <div class="secundario">👥 Alex</div>
+                            <div class="telefono">📞 682 40 36 39</div>
+                        </td>
+                        <td class="support-day">
+                            <div class="day-number">25</div>
+                            <div class="principal">👤 Fede</div>
+                            <div class="telefono">📞 686 64 27 28</div>
+                        </td>
+                        <td class="support-day">
+                            <div class="day-number">26</div>
+                            <div class="principal">👤 Carlos S</div>
+                            <div class="telefono">📞 630 64 40 81</div>
+                        </td>
+                        <td class="support-day friday">
+                            <div class="day-number">27</div>
+                            <div class="principal">👤 Sofia</div>
+                            <div class="telefono">📞 682 21 40 25</div>
+                            <div class="secundario">👥 Mario</div>
+                            <div class="telefono">📞 686 43 24 76</div>
+                        </td>
+                        <td class="empty-day">
+                            <div class="day-number">28</div>
+                        </td>
+                        <td class="empty-day"></td>
                     </tr>
                 </tbody>
             </table>
@@ -370,4 +598,5 @@
 
 
 </body>
+
 </html>
